@@ -12,7 +12,7 @@ for archivo in os.listdir():
         if os.path.isfile (archivo):
                 archivos.append(archivo)
 
-print("archivos")
+print(archivos)
 
 #se guarda clave en un archivo
 
